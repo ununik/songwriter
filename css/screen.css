@@ -1,0 +1,18 @@
+#content{
+    width: 60%;
+    float: left;
+}
+#editor{
+    text-align: center;
+    line-height: 3em;
+    border: 1px dotted silver;
+    min-height: 150px;
+    outline: none;
+}
+#editor * {
+    background: transparent !important;
+}
+#vertical_menu{
+    width: 30%;
+    float: right;
+}
