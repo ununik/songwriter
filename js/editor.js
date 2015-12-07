@@ -1,7 +1,9 @@
 function addChord(chord){
-     var position = showCaretPos();
-    var chord = chord.innerHTML;
-    alert(chord + ' in position ' + position);
+    var position = showCaretPos();
+    var text = document.getElementById("editor").innerHTML;
+    //text.innerText = addOnPosition(text.innerText, position, chord)
+    text = text.replace("&nbsp;", "<br>");
+    test(text, position, chord)
 }
 function getCaretCharacterOffsetWithin(element) {
     var caretOffset = 0;
@@ -24,4 +26,10 @@ function getCaretCharacterOffsetWithin(element) {
 function showCaretPos() {
     var el = document.getElementById("editor");
     return getCaretCharacterOffsetWithin(el);
+}
+
+function test(text, position, chord){
+    ajaxCall('controllers/writer/test.php', function(xhr) {
+        document.getElementById('editor').innerHTML = xhr.responseText;
+    }, 'text=' + text + '&position=' + position + '&chord=' + chord)
 }

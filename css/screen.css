@@ -1,13 +1,34 @@
+.akord{
+	display: inline;
+	width: 35px;
+	height: 35px;
+	position: relative;
+	top: -35px;	
+	left: -15px;
+}
+.akord_posun{
+	position: relative;
+	top: -35px;
+}
 #content{
     width: 60%;
     float: left;
 }
 #editor{
-    text-align: center;
-    line-height: 3em;
+    /*text-align: center;*/
     border: 1px dotted silver;
     min-height: 150px;
     outline: none;
+    padding-top: 40px;
+    line-height: 5.5em;
+}
+#editor div{
+	padding: 0px 0px 40px 0px;
+}
+#editor p{
+	padding: 0px 0px 40px 0px;
+	display: block;
+	width: 100%;
 }
 #editor * {
     background: transparent !important;
@@ -15,4 +36,8 @@
 #vertical_menu{
     width: 30%;
     float: right;
+}
+.wrapper{
+	position:absolute;
+	display: inline;
 }
